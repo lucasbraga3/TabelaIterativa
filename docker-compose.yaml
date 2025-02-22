@@ -1,0 +1,23 @@
+
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: mbancotestehexagon
+    environment:
+      POSTGRES_USER: Hexagon
+      POSTGRES_PASSWORD: senhaHexagon
+      POSTGRES_DB: meuBanco
+    ports:
+      - "5431:5432"
+    volumes:
+      - dadospg:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U Hexagon -d meuBanco"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  dadospg:

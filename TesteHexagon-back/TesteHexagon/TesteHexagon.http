@@ -1,0 +1,6 @@
+@TesteHexagon_HostAddress = http://localhost:5130
+
+GET {{TesteHexagon_HostAddress}}/api/Clientes/
+Accept: application/json
+
+###
