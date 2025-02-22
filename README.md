@@ -34,17 +34,17 @@ Uma aplicação full stack modular desenvolvida com tecnologias modernas para of
 
 1. **Configurar Banco de Dados (Docker)**  
    No diretório raiz do projeto, execute:  
-        ```bash
-        docker-compose up --build
+   ```bash
+   docker-compose up --build
    O banco de dados PostgreSQL será iniciado na porta 5431.
 2. **Iniciar o Backend**  
    Navegue até `TesteHexagon-back/TesteHexagon` e execute:  
-        ```bash
-        dotnet run
+   ```bash
+   dotnet run
     A API RESTful será iniciada na porta 5130.
 3. **Frontend (React)**  
    Navegue até `TesteHexagon-front` , instale as dependências e inicie:  
-        ```bash
-        npm install
-        npm run dev
-   O frontend será iniciado na porta 5173.
+   ```bash
+   npm install
+   npm run dev
+    O frontend será iniciado na porta 5173.
